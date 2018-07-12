@@ -26,6 +26,9 @@ agent none
         } 
    stage('deploy')
 	{
+	agent {
+	label 'apache'
+	}
 	steps { 
 	sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/"
 	}
