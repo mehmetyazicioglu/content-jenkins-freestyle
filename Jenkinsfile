@@ -44,4 +44,3 @@ label 'CentOS'
 	archiveArtifacts artifacts: 'dist/*.jar' , fingerprint:true
 } 
 }
-}
