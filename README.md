@@ -1,2 +1,2 @@
 # content-jenkins-freestyle
-test
+testing pipeline jenkins setup
