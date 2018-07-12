@@ -11,24 +11,26 @@ agent none
 	junit 'reports/result.xml'
 	}
 	}
-   	stage ('build') { 
+   stage ('build') { 
 	agent {
 	label 'apache'
 	}
    	steps{
     	sh 'ant -f build.xml -v'
    	}
+	post {
 	success {
         archiveArtifacts artifacts: 'dist/*.jar' , fingerprint:true
         }
+	}
         } 
-   	stage('deploy')
+   stage('deploy')
 	{
 	steps { 
 	sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/"
 	}
 	}
-	stage ("Running on CentOS"){
+   stage ("Running on CentOS"){
 	agent {
 	label 'CentOS'
 	}
