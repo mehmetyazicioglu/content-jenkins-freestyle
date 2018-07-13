@@ -78,7 +78,7 @@ agent none
 	sh 'git checkout master'
 	echo 'merging Development into master Branch'
 	sh 'git merge development'
-	echo "Pushing to Origian Master'
+	echo "Pushing to Origian Master"
 	sh 'git push origin master'
 	}
 }
