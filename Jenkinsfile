@@ -82,8 +82,6 @@ agent none
 	echo "Pushing to Origian Master"
 	sh 'git push origin master'
 	}
-}
-}
-
+	}
 }
 }
