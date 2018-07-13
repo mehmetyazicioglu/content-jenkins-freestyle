@@ -74,7 +74,7 @@ agent none
 	sh 'git stash'
 	echo " Checking out development Branch"
 	sh 'git checkout development'
-	echo 'checking out Master Branch"
+	echo 'checking out Master Branch'
 	sh 'git checkout master'
 	echo 'merging Development into master Branch'
 	sh 'git merge development'
