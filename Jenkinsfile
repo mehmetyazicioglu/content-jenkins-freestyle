@@ -66,9 +66,10 @@ agent none
    stage ('Promote Development Branch to Master') {
 	agent { 
 	label 'apache'
+	}
 	when { 
 	branch 'development'
-}
+	}
 	steps {
 	echo "Stashing any local changes"
 	sh 'git stash'
