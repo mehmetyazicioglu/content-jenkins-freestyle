@@ -73,7 +73,7 @@ agent none
 	echo "Stashing any local changes"
 	sh 'git stash'
 	echo " Checking out development Branch"
-	sh 'git checkout development"
+	sh 'git checkout development'
 	echo 'checking out Master Branch"
 	sh 'git checkout master'
 	echo 'merging Development into master Branch'
