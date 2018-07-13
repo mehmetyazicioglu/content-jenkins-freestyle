@@ -42,7 +42,7 @@ agent none
 	sh "java -jar rectangle_${env.BUILD_NUMBER}.jar  3 4"
 	}
 	}
-   stage  ("Test on Debian") {
+   stage ("Test on Debian") {
 	agent { 
 	docker 'openjdk:8u121-jre'
 	}
@@ -51,10 +51,14 @@ agent none
 	sh "java -jar rectangle_${env.BUILD_NUMBER}.jar  3 4"
 	}
 	}
-	stage ('Promote to Green') { 
+   stage ('Promote to Green') { 
+	agent {
+        label 'apache'
+	}
 	steps {
 	sh "cp  /var/www/html/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar  /var/www/html/rectangles/green/"
 	}
 	}
+
 }
 }
