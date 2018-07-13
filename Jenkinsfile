@@ -77,6 +77,7 @@ agent none
 	sh 'git checkout development'
 	echo 'checking out Master Branch'
 	sh 'git checkout master'
+	sh 'git pull'
 	echo 'merging Development into master Branch'
 	sh 'git merge development'
 	echo "Pushing to Origian Master"
