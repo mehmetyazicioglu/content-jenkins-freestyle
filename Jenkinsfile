@@ -74,6 +74,7 @@ agent none
 	when { 
 	branch 'development'
 	}
+	steps {
 	echo "Stashing Any Local Changes"
         sh 'git stash'
         echo "Checking Out Development Branch"
