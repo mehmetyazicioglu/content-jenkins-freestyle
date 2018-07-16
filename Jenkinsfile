@@ -44,7 +44,7 @@ agent none
 	}
 	steps {
 	sh "wget http://mehmety2.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
-	sh "java -jar rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}  3 4"
+	sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}  3 4"
 	}
 	}
    stage ("Test on Debian") {
@@ -53,7 +53,7 @@ agent none
 	}
 	steps {
 	sh "wget http://mehmety2.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
-	sh "java -jar rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}  3 4"
+	sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}  3 4"
 	}
 	}
    stage ('Promote to Green') { 
