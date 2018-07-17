@@ -6,12 +6,6 @@ agent none
 	}
 
  stages  {
-   stage ('say Hello') {
-	agent any 
-	steps { 
-	sayHello 'project is going on'
-	}
-	}
    stage ('Unit Tests') {
     	agent {
 	label 'apache'
